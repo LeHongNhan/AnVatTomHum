@@ -7,7 +7,8 @@ namespace AnVatTomHum.Model.Models
     public class Footer
     {
         [Key]
-        public string Id { get; set; }
+        [MaxLength(50)]
+        public string ID { get; set; }
         [Required]
         public string Content { get; set; }
 

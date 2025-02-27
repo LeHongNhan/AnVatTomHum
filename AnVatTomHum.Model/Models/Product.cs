@@ -19,9 +19,12 @@ namespace AnVatTomHum.Model.Models
         [Required]
         public string Name { get; set; }
         [Required]
+        [Column(TypeName = "varchar")]
+        [MaxLength(256)]
         public string Alias { get; set; }
-
+        [Required]
         public int CategoryID { get; set; }
+        [MaxLength(256)]
         public string Image { get; set; }
         public XElement MoreImage { get; set; }
         
@@ -35,6 +38,7 @@ namespace AnVatTomHum.Model.Models
         public int ViewCount {  get; set; }
         [ForeignKey("CategoryID")]
         public virtual ProductCategory ProductCategory { get; set; }
+        public virtual IEnumerable<OrderDetail> OrderDetails { get; set; }
 
     }
 }

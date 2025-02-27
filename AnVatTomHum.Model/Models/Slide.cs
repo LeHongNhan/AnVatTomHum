@@ -8,26 +8,26 @@ using System.Threading.Tasks;
 
 namespace AnVatTomHum.Model.Models
 {
-    [Table("Menus")]
-    public class Menu
+    [Table("Slides")]
+    public class Slide
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         [Required]
+        [MaxLength(50)]
         public string Name { get; set; }
         [Required]
-        [MaxLength(256)]
-        public string URL { get; set; }
-        public int? DisplayOrder { get; set; }
+        [MaxLength(250)]
+        public string Description { get; set; }
         [Required]
-        public int MenuGroupID { get; set; }
-        [ForeignKey("MenuGroupID")]
-        public virtual MenuGroup MenuGroup { get; set; }
-        [MaxLength(10)]
-        public string Target { get; set; }
+        [MaxLength(500)]
+        public string Image { get; set; }
         [Required]
-        public bool Status { get; set; }
+        [MaxLength(500)]
+        public string Url { get; set; }
+        public int? DisplayOrder { get; set; } 
+        public bool? Status { get; set; }
 
     }
 }
