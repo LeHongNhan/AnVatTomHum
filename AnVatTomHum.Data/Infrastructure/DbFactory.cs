@@ -7,19 +7,19 @@ using System.Threading.Tasks;
 
 namespace AnVatTomHum.Data.Infrastructure
 {
-    public class DbFactory : Dispoable, IDbFactory
+    public class DbFactory : Disposable, IDbFactory
     {
-        AnVatTomHumDbContext dbContext;
+        private AnVatTomHumDbContext dbContext;
+
         public AnVatTomHumDbContext Init()
         {
-            return dbContext??(dbContext=new AnVatTomHumDbContext());
+            return dbContext ?? (dbContext = new AnVatTomHumDbContext());
         }
-        protected override void Dispose(bool disposing)
+
+        protected override void DisposeCore()
         {
-            if (dbContext!=null)
-            {
+            if (dbContext != null)
                 dbContext.Dispose();
-            }
         }
     }
 }
