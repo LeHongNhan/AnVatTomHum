@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace AnVatTomHum.Model.Models
 {
-    [Table("PostTags")]
+    [Table("ProductTags")]
     public class ProductTag
     {
         [Key]
+        [Column(Order = 0)]
         public int ProductID { get; set; }
-        [Key]
-        [Column(TypeName = "varchar")]
+        [Column(TypeName = "varchar", Order =1)]
         [MaxLength(50)]
         public string TagID {  get; set; }
         [ForeignKey("ProductID")]

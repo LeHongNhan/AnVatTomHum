@@ -33,7 +33,6 @@ namespace AnVatTomHum.Data
         public DbSet<VisitorStatistic> VisitorStatistics { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            
         }
     }
 }

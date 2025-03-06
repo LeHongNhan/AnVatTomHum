@@ -13,6 +13,7 @@ namespace AnVatTomHum.Model.Models
     public class Post : Auditable
     {
         [Key]
+        [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }
         [Required]
         public string Name { get; set; }
@@ -21,7 +22,7 @@ namespace AnVatTomHum.Model.Models
         [Required]
         public string Alias { get; set; }
         [Required]
-        public string CategoryID { get; set; }
+        public int CategoryID { get; set; }
         [MaxLength(256)]
         public string Image {  get; set; }
         [MaxLength(500)]

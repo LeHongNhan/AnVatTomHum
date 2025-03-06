@@ -13,6 +13,7 @@ namespace AnVatTomHum.Model.Models
     public class SupportOnline
     {
         [Key]
+        [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }
         [Required]
         [MaxLength(50)]

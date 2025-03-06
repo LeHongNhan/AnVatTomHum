@@ -8,11 +8,17 @@ using System.Threading.Tasks;
 
 namespace AnVatTomHum.Data.Infrastructure
 {
-    public abstract class RepositoryBase<T> where T:class
+    public abstract class RepositoryBase<T> : IRepository<T> where T:class
     {
         #region Properties
         private AnVatTomHumDbContext dataContext;
         private readonly IDbSet<T> dbSet;
+
+        protected RepositoryBase(IDbFactory dbFactory)
+        {
+            DbFactory = dbFactory;
+            dbSet = DbContext.Set<T>();
+        }
 
         protected IDbFactory DbFactory
         {

@@ -12,6 +12,7 @@ namespace AnVatTomHum.Model.Models
     public class SystemConfig
     {
         [Key]
+        [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         [Required]
         [MaxLength(50)]
