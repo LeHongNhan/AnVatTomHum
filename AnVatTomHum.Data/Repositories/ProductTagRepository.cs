@@ -12,7 +12,7 @@ namespace AnVatTomHum.Data.Repositories
     {
 
     }
-    public class ProductTagRepository : RepositoryBase<Product>, IProductTagRepository
+    public class ProductTagRepository : RepositoryBase<ProductTag>, IProductTagRepository
     {
         public ProductTagRepository(IDbFactory dbFactory) : base(dbFactory)
         {
