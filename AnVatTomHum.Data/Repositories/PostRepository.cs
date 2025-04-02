@@ -10,12 +10,17 @@ namespace AnVatTomHum.Data.Repositories
 {
     public interface IPostRepository
     {
-
+        IEnumerable<Post> GetByAlias(string Alias);
     }
     public class PostRepository : RepositoryBase<Post>, IPostRepository
     {
         public PostRepository(IDbFactory dbFactory) : base(dbFactory)
         {
+        }
+
+        public IEnumerable<Post> GetByAlias(string Alias)
+        {
+            return this.DbContext.Posts.Where(p => p.Alias == Alias);
         }
     }
 }

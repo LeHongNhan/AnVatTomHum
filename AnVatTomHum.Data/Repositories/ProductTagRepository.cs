@@ -10,12 +10,13 @@ namespace AnVatTomHum.Data.Repositories
 {
     public interface IProductTagRepository
     {
-
+        //IEnumerable<ProductTag> GetByAlias(string alias);
     }
     public class ProductTagRepository : RepositoryBase<ProductTag>, IProductTagRepository
     {
         public ProductTagRepository(IDbFactory dbFactory) : base(dbFactory)
         {
         }
+
     }
 }
