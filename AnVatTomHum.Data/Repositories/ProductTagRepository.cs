@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace AnVatTomHum.Data.Repositories
 {
-    public interface IProductTagRepository
+    public interface IProductTagRepository : IRepository<ProductTag>
     {
         //IEnumerable<ProductTag> GetByAlias(string alias);
     }

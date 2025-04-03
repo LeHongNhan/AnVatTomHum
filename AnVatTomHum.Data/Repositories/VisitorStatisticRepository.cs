@@ -8,7 +8,10 @@ using System.Threading.Tasks;
 
 namespace AnVatTomHum.Data.Repositories
 {
-    public interface IVisitorStatiticRepository { }
+    public interface IVisitorStatiticRepository : IRepository<VisitorStatistic>
+    {
+
+    }
     public class VisitorStatisticRepository : RepositoryBase<VisitorStatistic>, IVisitorStatiticRepository
     {
         public VisitorStatisticRepository(IDbFactory dbFactory) : base(dbFactory)

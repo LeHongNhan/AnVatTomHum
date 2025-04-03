@@ -78,7 +78,7 @@
     <Compile Include="Repositories\ProductRepository.cs" />
     <Compile Include="Repositories\ProductTagRepository.cs" />
     <Compile Include="Repositories\SlideRepository.cs" />
-    <Compile Include="Repositories\SupportOnilneREpository.cs" />
+    <Compile Include="Repositories\SupportOnlineREpository.cs" />
     <Compile Include="Repositories\SystemConfigRepository.cs" />
     <Compile Include="Repositories\TagRepository.cs" />
     <Compile Include="Repositories\VisitorStatisticRepository.cs" />

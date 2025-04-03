@@ -9,7 +9,10 @@ using System.Threading.Tasks;
 namespace AnVatTomHum.Data.Repositories
 {
 
-    public interface IMenuGroupRepository { }
+    public interface IMenuGroupRepository : IRepository<MenuGroup>
+    {
+        
+    }
     public class MenuGroupRepository : RepositoryBase<MenuGroup>, IMenuGroupRepository
     {
         public MenuGroupRepository(DbFactory dbFactory) : base(dbFactory) {

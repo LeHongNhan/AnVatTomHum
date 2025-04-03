@@ -8,7 +8,10 @@ using System.Threading.Tasks;
 
 namespace AnVatTomHum.Data.Repositories
 {
-    public interface ISystemConfigRepository { }
+    public interface ISystemConfigRepository : IRepository<SystemConfig>
+    {
+
+    }
     public class SystemConfigRepository : RepositoryBase<SystemConfig>, ISystemConfigRepository
     {
         public SystemConfigRepository(IDbFactory dbFactory) : base(dbFactory) { }

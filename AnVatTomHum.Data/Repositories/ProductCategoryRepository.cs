@@ -10,7 +10,7 @@ using Microsoft.SqlServer.Server;
 using System.Linq;
 namespace AnVatTomHum.Data.Repositories
 {
-    public interface IProductCategoryRepository
+    public interface IProductCategoryRepository : IRepository<ProductCategory>
     {
         IEnumerable<ProductCategory> GetByAlias(string Alias);
     }
